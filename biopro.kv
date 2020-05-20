@@ -1,0 +1,116 @@
+<CalcBoxLayout>:
+	id: BioProTool
+	orientation: 'vertical'
+	spacing: 5
+
+
+	
+	BoxLayout:
+		size_hint: (0.5,None)
+		Label: 
+			id: Main_text
+			font_size:40
+			text: '                   BioProTool'
+
+	BoxLayout:
+
+		BoxLayout:
+			orientation: 'vertical'
+			BoxLayout:
+				
+				Label:
+					text:"Substrate (Glc,Glyc,Ac)"
+			BoxLayout:
+				
+				Label:
+					text:"[S] g/L"
+			BoxLayout:
+					
+				Label:
+					text:"[X] g/L"
+			BoxLayout:
+				
+				Label:
+					text:"[P] g/L"
+			BoxLayout:
+				
+				Label:
+					text:"Time h"
+
+
+
+		
+		BoxLayout:
+			BoxLayout:
+				orientation: 'vertical'
+				spacing: 5
+				BoxLayout:	
+					TextInput:
+						id: entry
+						text : ''
+						font_size: 16
+						multline: False
+				BoxLayout:		
+					TextInput:
+						id: entry1
+						font_size: 16
+						multline: False
+				BoxLayout:		
+					TextInput:
+						id: entry2
+						font_size: 16
+						multline: False
+				BoxLayout:		
+					TextInput:
+						id: entry3
+						font_size: 16
+						multline: False
+				BoxLayout:		
+					TextInput:
+						id: entry4
+						font_size: 16
+						multline: False
+			
+			
+		
+	
+	BoxLayout:
+		size_hint: (1,0.25)
+		spacing: 5
+		Button:
+			text:'Solve' 
+			
+			on_press : 
+				cell_system = root.Monod_basic(entry.text,float(entry1.text),float(entry2.text),entry3.text)
+				cell_system.solve(int(entry4.text))
+				cell_system.plot()
+			
+
+
+
+	BoxLayout:
+		size_hint: (1, None)
+		spacing: 5
+		BoxLayout:
+			size_hint: (1, None)
+			orientation: 'vertical'
+			TextInput:
+				id: entry5
+				font_size: 16
+				multline: False
+			Button:
+				text:'Export Data' 
+				on_press :
+					cell_system = root.Monod_basic(entry.text,float(entry1.text),float(entry2.text),entry3.text)
+					cell_system.solve(int(entry4.text))
+					table_sol= cell_system.data_frame(col_name=['Time h','[X]','[S]','[P]'],data_table= list(zip(cell_system.t,cell_system.sol[:,0],cell_system.sol[:,1],cell_system.sol[:,len(cell_system.sol[0])-1])))
+					table_sol.to_excel(entry5.text + '.xlsx')
+ 
+		Button:
+			size_hint: (1, None)
+			text:'New' 
+			on_press : entry.text, entry1.text, entry2.text,entry3.text, entry4.text,entry5.text= '','','','','',''
+		
+	
+
+
