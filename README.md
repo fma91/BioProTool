@@ -1,7 +1,7 @@
 # BioProTool
 BioProTool is an small app with the aim of helpping Bioprocess teachers to explain the microbial growth using the Monod's Equation. 
 
-This version counts with a .exe (you can get it here https://drive.google.com/open?id=1Kb1hH9MMyUDtt29nU2hzbLp7PnieBHBH) ,but due to it is a kivy's app would be better for you if you package it for your prefered OS (Windows, iOS, Linux, Android, etc.). 
+This version counts with a .exe (you can get it here https://drive.google.com/open?id=1fb40Z8odEEO2enEuph0uaUpMr5RlgKGG) ,but due to it is a kivy's app would be better for you if you package it for your prefered OS (Windows, iOS, Linux, Android, etc.). 
 
 ![](screenshot.PNG)
 
@@ -22,7 +22,7 @@ Just run it cicking on the BioProApp.exe, it doesn't need installation.
  Select 1 of the 3 substrates. Declare a concentration [S], a initial biomass [X], a product concentration [P].
  If you want to quit the product just leave cell [P] empty (no spaces or tabs). 
  Constants are fixed and may not be exacts, are set for teaching porposes. 
- Different substrates have pariticular inhibitory concentration (they not the real ones, you can set them).
+ Different substrates have particular inhibitory concentration (they not the real ones, you can set them).
  P is a generic product with an arbitrary inhibitory concentration.
  
  # Errors
