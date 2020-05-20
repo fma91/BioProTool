@@ -24,6 +24,11 @@ Just run it cicking on the BioProApp.exe, it doesn't need installation.
  Constants are fixed and may not be exacts, are set for teaching porposes. 
  Different substrates have particular inhibitory concentration (they not the real ones, you can set them).
  P is a generic product with an arbitrary inhibitory concentration.
+ Finally, select a time space to observe the culture and click on Solve.
+
+![](screenshot2.PNG)
+
+  To export data to an .xlsx file, write a name for the new file and click on Export data. File will be generated in the same folder than the BioProApp.exe or the main.py file.
  
  # Errors
  This tool is error prone but it works for teaching porposes.
