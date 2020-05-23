@@ -3,7 +3,7 @@ BioProTool is an small app with the aim of helpping Bioprocess teachers to expla
 
 This version counts with a .exe (you can get it here https://drive.google.com/open?id=1fb40Z8odEEO2enEuph0uaUpMr5RlgKGG) ,but due to it is a kivy's app would be better for you if you package it for your prefered OS (Windows, iOS, Linux, Android, etc.). 
 
-![](screenshot.PNG)
+![](screenshot1.PNG)
 
 # How to run it.
 
