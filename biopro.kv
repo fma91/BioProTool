@@ -1,38 +1,71 @@
+
+
+<SmoothButton@Button>:
+	background_color: (0,0,0,0)
+	backgornd_normal:''
+	back_color: (1,0,1,1)
+	border_radius: [18]
+	canvas.before:
+		Color:
+			rgba: self.back_color
+		RoundedRectangle:
+			size: self.size
+			pos: self.pos
+			radius: self.border_radius
+			
+<GreenLayout@BoxLayout>:
+	background_color: 1, 0, 1, 1
+	canvas:
+		Color:
+			rgba: 0,0.9,0.5,0.3
+		RoundedRectangle:
+			size: self.size
+			pos: self.pos
+
+<BlueLayout@BoxLayout>:
+	background_color: 1, 0, 1, 1
+	canvas:
+		Color:
+			rgba: 0,0.9,1,0.4
+		RoundedRectangle:
+			size: self.size
+			pos: self.pos
+
 <CalcBoxLayout>:
 	id: BioProTool
 	orientation: 'vertical'
 	spacing: 5
 
-
 	
-	BoxLayout:
-		size_hint: (0.5,None)
+	BlueLayout:	
+		size_hint: (1,None)
 		Label: 
 			id: Main_text
 			font_size:40
-			text: '                   BioProTool'
+			text: 'BioProTool'
+
 
 	BoxLayout:
-
+		spacing: 5	
 		BoxLayout:
+			spacing: 5	
 			orientation: 'vertical'
-			BoxLayout:
-				
+			GreenLayout:
 				Label:
 					text:"Substrate (Glc,Glyc,Ac)"
-			BoxLayout:
+			GreenLayout:
 				
 				Label:
 					text:"[S] g/L"
-			BoxLayout:
+			GreenLayout:
 					
 				Label:
 					text:"[X] g/L"
-			BoxLayout:
+			GreenLayout:
 				
 				Label:
 					text:"[P] g/L"
-			BoxLayout:
+			GreenLayout:
 				
 				Label:
 					text:"Time h"
@@ -47,29 +80,33 @@
 				BoxLayout:	
 					TextInput:
 						id: entry
-						text : ''
 						font_size: 16
 						multline: False
+						write_tab: False
 				BoxLayout:		
 					TextInput:
 						id: entry1
 						font_size: 16
 						multline: False
+						write_tab: False
 				BoxLayout:		
 					TextInput:
 						id: entry2
 						font_size: 16
 						multline: False
+						write_tab: False						
 				BoxLayout:		
 					TextInput:
 						id: entry3
 						font_size: 16
 						multline: False
+						write_tab: False
 				BoxLayout:		
 					TextInput:
 						id: entry4
 						font_size: 16
 						multline: False
+						write_tab: False
 			
 			
 		
@@ -77,14 +114,14 @@
 	BoxLayout:
 		size_hint: (1,0.25)
 		spacing: 5
-		Button:
+		SmoothButton:
 			text:'Solve' 
 			
 			on_press : 
 				cell_system = root.Monod_basic(entry.text,float(entry1.text),float(entry2.text),entry3.text)
 				cell_system.solve(int(entry4.text))
 				cell_system.plot()
-			
+			back_color:  0,0.9,1,0.4
 
 
 
@@ -92,25 +129,27 @@
 		size_hint: (1, None)
 		spacing: 5
 		BoxLayout:
-			size_hint: (1, None)
-			orientation: 'vertical'
-			TextInput:
+			orientation:'vertical'
+			spacing: 5
+			TextInput: 
 				id: entry5
 				font_size: 16
 				multline: False
-			Button:
+				write_tab: False
+			SmoothButton:
 				text:'Export Data' 
 				on_press :
 					cell_system = root.Monod_basic(entry.text,float(entry1.text),float(entry2.text),entry3.text)
 					cell_system.solve(int(entry4.text))
 					table_sol= cell_system.data_frame(col_name=['Time h','[X]','[S]','[P]'],data_table= list(zip(cell_system.t,cell_system.sol[:,0],cell_system.sol[:,1],cell_system.sol[:,len(cell_system.sol[0])-1])))
 					table_sol.to_excel(entry5.text + '.xlsx')
+				back_color:  0,0.9,1,0.4
  
-		Button:
+		SmoothButton:
 			size_hint: (1, None)
 			text:'New' 
-			on_press : entry.text, entry1.text, entry2.text,entry3.text, entry4.text,entry5.text= '','','','','',''
-		
+			on_press : entry.text, entry1.text, entry2.text,entry3.text, entry4.text,entry5.text='','','','','',''
+			back_color:  0,0.9,1,0.4
 	
 
 
