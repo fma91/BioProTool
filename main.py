@@ -3,6 +3,7 @@ kivy.require('1.11.1')
  
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.floatlayout import FloatLayout
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.integrate import odeint
