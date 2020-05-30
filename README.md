@@ -33,5 +33,5 @@ Just run it clicking on the BioProApp.exe, it doesn't need installation.
  # Errors
  This tool is error prone but it works for teaching porposes.
  No spaces are allowed into the cells that ask for a number.
- Each time you get a misstake, tha app will close itself. The most frequent reasson is an invalid character at the cell number (like tab or space) or an invalid substrate.
+ Each time you get a misstake, tha app will close by itself. The most frequent reasson is an invalid character at the cell number (like tab or space) or an invalid substrate.
  
