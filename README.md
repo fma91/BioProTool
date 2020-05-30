@@ -9,7 +9,7 @@ This version counts with a .exe (you can get it here https://drive.google.com/op
 
 ## Using .exe file
 Donwload the file and unzip it.
-Just run it cicking on the BioProApp.exe, it doesn't need installation. 
+Just run it clicking on the BioProApp.exe, it doesn't need installation. 
 
 ## Using terminal and unpackaged files
  You need the python module kivy ( https://kivy.org/#home ), pandas and matplotlib.
