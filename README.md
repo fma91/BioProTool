@@ -19,7 +19,7 @@ Just run it clicking on the BioProApp.exe, it doesn't need installation.
  $ python main.py
  
  # Once on the user interface
- Select 1 of the 3 substrates. Declare a concentration [S], a initial biomass [X], a product concentration [P].
+ Select 1 of the 3 substrates. Declare a concentration [S], an initial biomass [X], a product concentration [P].
  If you want to quit the product just leave cell [P] empty (no spaces or tabs). 
  Constants are fixed and may not be exacts, are set for teaching porposes. 
  Different substrates have particular inhibitory concentration (they not the real ones, you can set them).
