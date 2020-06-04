@@ -1,7 +1,7 @@
 # BioProTool
 BioProTool is an small app with the aim of helpping Bioprocess teachers to explain the microbial growth using the Monod's Equation. 
 
-This version counts with a .exe (you can get it here https://drive.google.com/file/d/1TcsmqvDV-wAyIozG4HsI_z_fay6aKPZN/view?usp=sharing),but due to it is a kivy's app would be better for you if you package it for your prefered OS (Windows, iOS, Linux, Android, etc.). 
+This version counts with a .exe (you can get it here https://drive.google.com/file/d/1TcsmqvDV-wAyIozG4HsI_z_fay6aKPZN/view?usp=sharing) ,but due to it is a kivy's app would be better for you if you package it for your prefered OS (Windows, iOS, Linux, Android, etc.). 
 
 ![](screenshot1.PNG)
 
